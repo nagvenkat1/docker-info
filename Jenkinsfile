@@ -9,7 +9,7 @@ pipeline {
         }
         stage('docker') {
             steps {
-                sh 'docker.sh'
+                sh 'sh docker.sh'
             }
         }
     }
