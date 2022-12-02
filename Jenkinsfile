@@ -1,16 +1,15 @@
-
 pipeline {
     agent  { label 'DOCKER' } 
     stages {
         stage('vcs') {
             steps {
                 git url: "https://github.com/nagvenkat1/docker-info.git",
-                    branch: main
+                    branch: "main"
             }
         }
         stage('docker') {
             steps {
-                sh 'docker.sh'
+                sh './docker.sh'
             }
         }
     }
