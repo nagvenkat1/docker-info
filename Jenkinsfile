@@ -9,8 +9,8 @@ pipeline {
         }
         stage('docker') {
             steps {
-                sh 'sudo usermod -aG docker jenkins'
-                sh 'sudo chown jenkins:jenkins /var/run/docker.sock'
+                sh 'sudo usermod -aG docker azure'
+                sh 'sudo chown azure:azure /var/run/docker.sock'
                 sh 'sh docker.sh'
             }
         }
